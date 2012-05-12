@@ -1,0 +1,6 @@
+% layout 'default';
+<h1>MemcachedPP Get</h1><ul id="jumpers"><li><strong><a href="/set/<%= $item->[0] %>">Set This</a></strong></li><li><a href="/list">List</a></li></ul>
+<table class="props"><th colspan="2">Coverage</th>
+<tr><td class="lt" width="10%">Key</td><td><%= $item->[1] %></td></tr>
+<tr class="odd"><td class="lt">Size</td><td><%= $item->[2] %> bytes</td></tr>
+<th colspan="2">Value</th><tr><td class="lt">Bytes as is</td><td><pre><%= $item->[3] %></pre></td></tr></table>

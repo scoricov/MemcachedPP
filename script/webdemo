@@ -1,0 +1,38 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+
+$ENV{WEBDEMO_HOME}      ||= "$FindBin::Bin/../";
+$ENV{WEBDEMO_MEMCACHED} ||= '127.0.0.1:9191';
+$ENV{MOJO_MODE}         ||= 'production';
+$ENV{MOJO_RELOAD}       ||= 0;
+
+if ($ENV{WEBDEMO_WITH_BACKEND}) {
+    my $pid;
+
+    if ($pid = fork())
+    {
+        require MemcachedPP::Web;
+        kill 'TERM', $pid;
+        exit 0;
+    }
+
+    require MemcachedPP::Server;
+    require MemcachedPP::Storage::SQLite;
+
+    my $server = MemcachedPP::Server->new(
+        listen  => [ $ENV{WEBDEMO_MEMCACHED} ],
+        storage => MemcachedPP::Storage::SQLite->new(
+            dbfile => "$FindBin::Bin/memcachedpp.db"
+        ),
+    );
+
+    $server->run;
+
+} else {
+    require MemcachedPP::Web;
+}

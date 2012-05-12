@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<title>MemcachedPP Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="-" />
+<meta name="keywords" content="" />
+<meta name="author" content="Alexey Skorikov" />
+<meta name="copyright" content="Copyright 2010 Alexey Skorikov" />
+<link href="/basic.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/workspace.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/forms.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="headalt">&nbsp;</div><div id="camt"><div><div></div></div></div><div id="page">
+<%== content %>
+</div><div id="camb"><div><div>&#160;</div></div></div><div id="foot">
+<p>&#169; 2010 <a href="http://skorikov.name">Alexey Skorikov</a></p>
+<p>Powered by&nbsp;MemcachedPP::Web 0.86</p>
+</div>
+</body>
+</html>

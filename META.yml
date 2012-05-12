@@ -1,0 +1,43 @@
+---
+abstract: README
+author:
+  - 'Alexey Skorikov <alexey@skorikov.name>'
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3603'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: MemcachedPP
+provides:
+  MemcachedPP:
+    file: lib/MemcachedPP.pm
+    version: 0.86
+  MemcachedPP::Log:
+    file: lib/MemcachedPP/Log.pm
+  MemcachedPP::Server:
+    file: lib/MemcachedPP/Server.pm
+    version: 0.86
+  MemcachedPP::Storage:
+    file: lib/MemcachedPP/Storage.pm
+  MemcachedPP::Storage::SQLite:
+    file: lib/MemcachedPP/Storage/SQLite.pm
+  MemcachedPP::Web:
+    file: lib/MemcachedPP/Web.pm
+    version: 0.86
+requires:
+  AnyEvent: 5.27
+  Cache::Memcached: 1.29
+  DBD::SQLite: 1.29
+  DBI: 1.61
+  EV: 3.9
+  File::Temp: 0
+  Log::Dispatch: 2.26
+  Mojolicious: 0.9999
+  Test::More: 0
+  Test::Pod: 1.14
+  version: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.86

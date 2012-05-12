@@ -1,0 +1,71 @@
+/* StyleSheet for Webazilla LinkerStock */
+/* Copyright Alexey Skorikov, 2008-2009 */
+/* forms.css */
+
+form.detail {
+	padding:0;
+	margin:0;
+	font-size:100%;
+}
+
+form.detail fieldset {
+	margin-top:0.5em;
+}
+
+form.detail input.txt, form.detail select {
+	width:90%;
+}
+form.detail textarea { width:80%; }
+
+form.detail p {
+	clear:left;
+	margin:0;
+	padding:0.5em 0 0.5em 30%;
+	border-top:1px dashed gray;
+	height:1%;
+}
+
+form.detail p.warn {
+	background:#ffffe0;
+}
+
+form.detail p.warn label {
+	color:red;
+	text-decoration:underline;
+}
+
+form.detail p.ctl {
+	padding-top:1em;
+	padding-bottom:0;
+}
+
+form.detail label {
+	font-weight:bold;
+	float:left;
+	margin-left:-40%;
+	width:38%;
+	text-align:right;
+	font-size:100%;
+}
+
+form.detail input.txt,
+form.detail textarea,
+form.detail select {
+	background:#ffffff;
+	font-size:120%;
+}
+
+form.detail input.txt, form.detail textarea {
+	padding-left:0.3em;
+}
+
+form.detail input.btn {
+	font-size:100%;
+	margin:0 0.5em;
+}
+
+form.detail input.xbtn {
+	color:#006000;
+	font-weight:bold;
+	min-width:5em;
+}

@@ -1,0 +1,87 @@
+MemcachedPP      - pure Perl lightweight implementation of Memcached
+MemcachedPP::Web - simple web interface to MemcachedPP
+
+USAGE
+
+See ./script/memcachedpp -h for instructions.
+
+Example1:
+
+./script/memcachedpp -l 127.0.0.1:9191 -T 60 -f sqlite.db -d -p memdpp.pid -D -L memdpp.log
+
+Meaning:
+* run memcachedpp as daemon write PID to memdpp.pid
+* listen to 127.0.0.1:9191 for incomming connections,
+  disconnect after 60 seconds of idling or transport delay;
+* setup SQLite storage within database file of sqlite.db
+* write logs to memdpp.log, set log level to DEBUG
+
+Example2:
+
+./script/memcachedpp -l somesocket -D
+
+Meaning:
+* run memcachedpp in foreground mode
+* listen to UNIX socket 'somesocket' for incomming connections;
+* setup storage in memory
+* write logs to screen, set log level to DEBUG
+
+Example3:
+
+./script/memcachedpp -S -p memdpp.pid
+
+Meaning:
+* read memcachedpp PID from file memdpp.pid;
+* stop memcachedpp daemon;
+
+
+MemcachedPP::Web fairly uses Cache::Memcached client to talk to
+the MemcachedPP backend.
+
+There are two ways to run the stuff:
+
+* run the backend server first, then run the web server
+
+./script/memcachedpp -l 127.0.0.1:9191 -f memcachedpp.db -d -p memcachedpp.pid
+./script/webdemo daemon
+
+* OR let the web server fork a separate backend process
+
+WEBDEMO_WITH_BACKEND=1 ./script/webdemo daemon
+
+Both ways will set memcachedpp up with SQLite storage in file called
+memcachedpp.db. Web service will be available at http://*:3000.
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+Alternatively, to install with Module::Build, you can use the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+
+DEPENDENCIES
+
+Log::Dispatch - for comprehensive logging
+Cache::Memcached - to talk to MemcachedPP service
+Mojolicious - to produce web interface
+AnyEvent, EV - for asynchronous server
+DBI, DBD::SQLite - for storage
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2010, Alexey Skorikov
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.

@@ -1,0 +1,87 @@
+* html form input {
+	font:81%/1.1 "Trebuchet MS",arial,helvetica,sans-serif;
+}
+
+body, td, th, textarea, input, select, h2, h3, h4, h5, h6, label {
+	font:83%/1.5 "Trebuchet MS",arial,helvetica,sans-serif;
+}
+
+body {
+	background:#cacaca url(./bgw.gif); /* c8c6c3 */
+	margin:0 5%;
+	padding:0;
+	text-align:left;
+	color:#111;
+	min-width:580px;
+}
+
+p { margin:0; padding:1em 0 0 0; clear:both; font-size:100%; display:block; }
+
+td, th {
+	text-align:left;
+	vertical-align:top;
+}
+
+pre, td, th, input, select {
+	font-size:11px;
+}
+
+h1 {
+	font-size:21px;
+	padding:5px 0 10px 0;
+	margin:0;
+}
+
+h2 {
+	font-size:17px;
+	padding:7px 0 5px 0;
+	margin:0;
+}
+
+h3 {
+	font-size:13px;
+	padding:12px 0 7px 0;
+	margin:0;
+	}
+
+h4, h5, h6 {
+	font-size:12px;
+	padding:10px 0 5px 0;
+	margin:0;
+}
+
+ol, ul {
+	font-size:12px;
+	margin:0;
+	padding:1.5em 1em 1em 3.5em;
+}
+
+li {
+	padding:0.3em;
+	margin:0;
+}
+
+img, abbr, acronym {
+	border:none;
+}
+
+a:link { color:#105CB6; outline:none; border:none; }
+a:visited { color:#2E6AB1; border:none; }
+a:hover,
+a:focus,
+a:active {
+	color:#003;
+	border:none;
+}
+
+form     { padding:0; margin:0; border:0; }
+fieldset { padding:0; margin:0; border:0; }
+
+input.txt, textarea, select {
+	border:solid 1px;
+	border-top-color:#606060;
+	border-left-color:#606060;
+	border-right-color:#dddddd;
+	border-bottom-color:#dddddd;
+	margin:0;
+}

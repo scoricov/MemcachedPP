@@ -1,0 +1,23 @@
+% layout 'default';
+% my $item = stash 'item';
+<h1>MemcachedPP Set</h1><ul id="jumpers"><li><a href="/list">List</a></li></ul>
+<div class="band fullwid"><div class="plate bg_green"><div><div><div><div>
+<form action="/set" method="post" enctype="application/x-www-form-urlencoded;charset=utf8" class="detail">
+<div class="pad"><fieldset><legend>Key details</legend>
+<p><label for="key">Key<b>*</b></label><input type="text" class="txt" name="key" id="key" maxlength="250" value="<%= $item->[1] %>"/></p>
+<p><label for="warranty">Expiration</label><select name="exptime" id="exptime" style="width:20%" >
+<option value="0" selected>Never</option>
+<option value="60">1 minute</option>
+<option value="180">3 minutes</option>
+<option value="600">10 minutes</option>
+<option value="1800">30 minutes</option>
+<option value="3600">1 hour</option>
+<option value="21600">6 hours</option>
+<option value="86400">1 day</option>
+<option value="604800">7 days</option>
+</select></p>
+<p><label for="value">Value</label><textarea name="value" id="value" rows="4" cols="30"><%= $item->[3] %></textarea></p>
+</fieldset><p class="ctl"><input type="submit" class="btn xbtn" name="rec_save" value="  Set  " /></p>
+</div>
+</form>
+</div></div></div></div></div></div>

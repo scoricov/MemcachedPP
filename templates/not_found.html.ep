@@ -1,0 +1,10 @@
+% layout 'default';
+<h1>Not Found</h1><br />
+Sorry, the document you have requested
+"<%= $self->req->url->path || '/' %>"
+could not be found. Please, consider the following:
+<ul>
+<li>make sure that the address is correct;</li>
+<li>try to reload the page after a while;</li>
+<li>anyway, if you suppose the document to exist by the specified address then <a href="mailto:alexey@skorikov.name">contact</a> webmaster.</li>
+</ul>
